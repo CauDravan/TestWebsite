@@ -33,6 +33,7 @@ body {
     list-style: none;
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 .menu li {
@@ -70,7 +71,8 @@ body {
 }
 
 .price {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: left
 }
 
 .price .new {
