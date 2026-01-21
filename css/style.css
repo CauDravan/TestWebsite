@@ -91,6 +91,10 @@ body {
     border: none;
     padding: 8px 15px;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
 }
 
 /* Banner */
