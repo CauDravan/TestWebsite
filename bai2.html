@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bang diem cua em</title>
+  <link rel="stylesheet" href="other/bai2_style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>BANG DIEM CUA EM</h1>
+
+    <div class="row">
+      <label>Semester1:</label>
+      <input type="number" id="s1" value="9">
+    </div>
+
+    <div class="row">
+      <label>Semester2:</label>
+      <input type="number" id="s2" value="10">
+    </div>
+
+    <div class="row">
+      <label>Year:</label>
+      <select id="year">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <div class="row summary">
+      <label>Summarise:</label>
+      <input type="text" id="avg" readonly>
+    </div>
+
+    <div class="result" id="rank"></div>
+
+    <div class="buttons">
+      <button onclick="calculate()">OK</button>
+      <button onclick="resetForm()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    function calculate() {
+      const s1 = parseFloat(document.getElementById("s1").value);
+      const s2 = parseFloat(document.getElementById("s2").value);
+      const year = parseInt(document.getElementById("year").value);
+
+      let avg = year === 1
+        ? (s1 + s2) / 2
+        : (s1 + s2 * 2) / 3;
+
+      document.getElementById("avg").value = avg;
+
+      let rank = "";
+      if (avg >= 8) rank = "Học sinh giỏi";
+      else if (avg >= 6.5) rank = "Học sinh khá";
+      else if (avg >= 5) rank = "Học sinh trung bình";
+      else rank = "Học sinh yếu";
+
+      document.getElementById("rank").innerText = rank;
+    }
+
+    function resetForm() {
+      document.getElementById("s1").value = "";
+      document.getElementById("s2").value = "";
+      document.getElementById("avg").value = "";
+      document.getElementById("rank").innerText = "";
+    }
+  </script>
+
+</body>
+</html>
