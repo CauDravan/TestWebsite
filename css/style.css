@@ -21,12 +21,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #C0E9F4;
+    border-bottom: 2px solid #fff;
     padding-bottom: 10px;
 }
 
 .header h2 {
     font-size: 20px;
+    color: #C0E9F4;
 }
 
 .menu {
