@@ -42,34 +42,7 @@
     </div>
   </div>
 
-  <script>
-    function calculate() {
-      const s1 = parseFloat(document.getElementById("s1").value);
-      const s2 = parseFloat(document.getElementById("s2").value);
-      const year = parseInt(document.getElementById("year").value);
-
-      let avg = year === 1
-        ? (s1 + s2) / 2
-        : (s1 + s2 * 2) / 3;
-
-      document.getElementById("avg").value = avg;
-
-      let rank = "";
-      if (avg >= 8) rank = "Học sinh giỏi";
-      else if (avg >= 6.5) rank = "Học sinh khá";
-      else if (avg >= 5) rank = "Học sinh trung bình";
-      else rank = "Học sinh yếu";
-
-      document.getElementById("rank").innerText = rank;
-    }
-
-    function resetForm() {
-      document.getElementById("s1").value = "";
-      document.getElementById("s2").value = "";
-      document.getElementById("avg").value = "";
-      document.getElementById("rank").innerText = "";
-    }
-  </script>
+  <script src="other/bai2_script.js"></script>
 
 </body>
 </html>
