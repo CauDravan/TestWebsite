@@ -17,10 +17,3 @@ function calculate() {
 
     document.getElementById("rank").innerText = rank;
 }
-
-function resetForm() {
-    document.getElementById("s1").value = "";
-    document.getElementById("s2").value = "";
-    document.getElementById("avg").value = "";
-    document.getElementById("rank").innerText = "";
-}
