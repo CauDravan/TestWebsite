@@ -3,7 +3,7 @@ function calculate() {
     var s2 = parseFloat(document.getElementById("s2").value);
     var year = parseInt(document.getElementById("year").value);
 
-    var k;
+    let k;
     switch (year) {
         case 1: {
             k = parseFloat((s1+(s2*2))/3);
