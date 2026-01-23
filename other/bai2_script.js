@@ -8,19 +8,22 @@ function calculate() {
         case 1: {
             k = parseFloat((s1+(s2*2))/3);
             document.getElementById("result").value = k;
+            break;
         }
         case 2: {
-            k = parseFloat((s1*2)+(s2*3))/5;
+            k = parseFloat(((s1*2)+(s2*3))/5);
             document.getElementById("result").value = k;
+            break;
         }
         case 3: {
-            k = parseFloat((s1*3)+(s2*4)/7);
+            k = parseFloat(((s1*3)+(s2*4))/7);
             document.getElementById("result").value = k;
+            break;
         }
     }
 
     if (k>=9) {
-        document.getElementById('rank').innterText = "Hoc sinh gioi";
+        document.getElementById('rank').interText = "Hoc sinh gioi";
         document.getElementById('rank').style.color = "red";
     }
     else if (k>=7 && k<9) {
