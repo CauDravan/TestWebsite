@@ -23,15 +23,15 @@ function calculate() {
     }
 
     if (k>=9) {
-        document.getElementById('rank').interText = "Hoc sinh gioi";
-        document.getElementById('rank').style.color = "red";
+        document.getElementById('result').innerText = "Hoc sinh gioi";
+        document.getElementById('result').style.color = "red";
     }
     else if (k>=7 && k<9) {
-        document.getElementById('rank').innerText = "Hoc sinh kha";
-        document.getElementById('rank').style.color = "blue";
+        document.getElementById('result').innerText = "Hoc sinh kha";
+        document.getElementById('result').style.color = "blue";
     }
     else {
-        document.getElementById('rank').innerText = "Hoc sinh trung binh";
-        document.getElementById('rank').style.color = "yellow";
+        document.getElementById('result').innerText = "Hoc sinh trung binh";
+        document.getElementById('result').style.color = "yellow";
     }
 }
