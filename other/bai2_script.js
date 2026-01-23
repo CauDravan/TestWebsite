@@ -7,17 +7,17 @@ function calculate() {
     switch (year) {
         case 1: {
             k = parseFloat((s1+(s2*2))/3);
-            document.getElementById("result").value = k;
+            document.getElementById("avg").value = k;
             break;
         }
         case 2: {
             k = parseFloat(((s1*2)+(s2*3))/5);
-            document.getElementById("result").value = k;
+            document.getElementById("avg").value = k;
             break;
         }
         case 3: {
             k = parseFloat(((s1*3)+(s2*4))/7);
-            document.getElementById("result").value = k;
+            document.getElementById("avg").value = k;
             break;
         }
     }
