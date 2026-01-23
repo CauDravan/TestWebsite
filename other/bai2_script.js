@@ -3,9 +3,9 @@ function calculate() {
     const s2 = parseFloat(document.getElementById("s2").value);
     const year = parseInt(document.getElementById("year").value);
 
-    let avg = year === 1
-        ? (s1 + s2) / 2
-        : (s1 + s2 * 2) / 3;
+    let avg;
+    if (year === 1) avg = (s1 + s2) / 2;
+    else avg = (s1 + s2 * 2) / 3;
 
     document.getElementById("avg").value = avg;
 
