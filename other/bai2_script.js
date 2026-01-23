@@ -3,17 +3,32 @@ function calculate() {
     var s2 = parseFloat(document.getElementById("s2").value);
     var year = parseInt(document.getElementById("year").value);
 
-    let avg;
-    if (year === 1) avg = (s1 + s2) / 2;
-    else avg = (s1 + s2 * 2) / 3;
+    var k;
+    switch (year) {
+        case 1: {
+            k = parseFloat((s1+(s2*2))/3);
+            document.getElementById("result").value = k;
+        }
+        case 2: {
+            k = parseFloat((s1*2)+(s2*3))/5;
+            document.getElementById("result").value = k;
+        }
+        case 3: {
+            k = parseFloat((s1*3)+(s2*4)/7);
+            document.getElementById("result").value = k;
+        }
+    }
 
-    document.getElementById("avg").value = avg;
-
-    let rank = "";
-    if (avg >= 8) rank = "Hoc sinh gioi";
-    else if (avg >= 6.5) rank = "Hoc sinh kha";
-    else if (avg >= 5) rank = "Hoc sinh trung binh";
-    else rank = "Hoc sinh yeu";
-
-    document.getElementById("rank").innerText = rank;
+    if (k>=9) {
+        document.getElementById('rank').innterText = "Hoc sinh gioi";
+        document.getElementById('rank').style.color = "red";
+    }
+    else if (k>=7 && k<9) {
+        document.getElementById('rank').innerText = "Hoc sinh kha";
+        document.getElementById('rank').style.color = "blue";
+    }
+    else {
+        document.getElementById('rank').innerText = "Hoc sinh trung binh";
+        document.getElementById('rank').style.color = "yellow";
+    }
 }
