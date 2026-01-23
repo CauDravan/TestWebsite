@@ -1,7 +1,7 @@
 function calculate() {
-    const s1 = parseFloat(document.getElementById("s1").value);
-    const s2 = parseFloat(document.getElementById("s2").value);
-    const year = parseInt(document.getElementById("year").value);
+    var s1 = parseFloat(document.getElementById("s1").value);
+    var s2 = parseFloat(document.getElementById("s2").value);
+    var year = parseInt(document.getElementById("year").value);
 
     let avg;
     if (year === 1) avg = (s1 + s2) / 2;
