@@ -1,15 +1,14 @@
 function saveData() {
-    const fullname = document.getElementById("fullname").value;
-    const idPro = document.getElementById("idPro").value;
-    const namePro = document.getElementById("namePro").value;
-    const quantity = Number(document.getElementById("quantity").value);
-    const price = Number(document.getElementById("price").value);
+    var fullname = document.getElementById("fullname").value;
+    var idPro = document.getElementById("idPro").value;
+    var namePro = document.getElementById("namePro").value;
+    var quantity = Number(document.getElementById("quantity").value);
+    var price = Number(document.getElementById("price").value);
+    var amount = quantity * price;
+    var discount = amount * 0.1;
+    var total = amount - discount;
 
-    const amount = quantity * price;
-    const discount = amount * 0.15; // ví dụ giảm 15%
-    const total = amount - discount;
-
-    const item = {
+    var item = {
         id: autoId++,
         fullname,
         idPro,
@@ -26,11 +25,11 @@ function saveData() {
 }
 
 function showData() {
-    const tbody = document.getElementById("tableBody");
+    var tbody = document.getElementById("tableBody");
     tbody.innerHTML = "";
 
     dataList.forEach(item => {
-        const row = `
+        var row = `
         <tr>
             <td>${item.id}</td>
             <td>${item.fullname}</td>
